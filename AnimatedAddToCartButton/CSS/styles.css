@@ -1,0 +1,163 @@
+@font-face{
+      font-family: Dosis;
+      src: url(../Fonts/Dosis-Regular.ttf);
+}
+:root{
+      font-family: Dosis;
+      color: #FFF;
+}
+*, *::before, *::after{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-decoration: none;
+      box-sizing: border-box;
+}
+body{
+      background: #3a3a3a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      min-height: 100vh;
+}
+input, button{
+      border: none;
+      outline: none;
+      font-family: Dosis;
+      padding: 0.5em 1em;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+}
+
+.shopping_container{
+      display: flex;
+      gap: 1.5rem;
+}
+
+.shopping_container button{
+      background: #FF4754;
+      padding: 0 3rem;
+      cursor: pointer;
+      border-radius: 0.1rem;
+      -webkit-border-radius: 0.1rem;
+      -moz-border-radius: 0.1rem;
+      -ms-border-radius: 0.1rem;
+      -o-border-radius: 0.1rem;
+      transition: 0.2s opacity;
+      -webkit-transition: 0.2s opacity;
+      -moz-transition: 0.2s opacity;
+      -ms-transition: 0.2s opacity;
+      -o-transition: 0.2s opacity;
+}
+
+.shopping_container button:hover{
+      opacity: 0.9;
+}
+
+.counter_container{
+      border: 1px solid #FFF2;
+      width: 3.3rem;
+      min-height: 3.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border-radius: 0.1rem;
+      -webkit-border-radius: 0.1rem;
+      -moz-border-radius: 0.1rem;
+      -ms-border-radius: 0.1rem;
+      -o-border-radius: 0.1rem;
+}
+
+.counter_container i{
+      width: 3rem;
+      color: #FFF;
+}
+
+.counter_container span{
+      user-select: none;
+      position: absolute;
+      width: 1.3rem;
+      height: 1.3rem;
+      background: #FF4754;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0.2rem;
+      right: 0.1rem;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+}
+ 
+.counter_container span:not(.animated_counter) {
+      display: none;
+}
+
+.counter_container span.animated_counter {
+      position: absolute;
+      /* Needed for top and right positioning */
+      animation: count 0.4s ease;
+      -webkit-animation: count 0.4s ease;
+}
+
+@keyframes count {
+      from {
+            top: 0.2rem;
+            right: -0.3rem;
+            transform: rotate(120deg);
+            -webkit-transform: rotate(120deg);
+            -moz-transform: rotate(120deg);
+            -ms-transform: rotate(120deg);
+            -o-transform: rotate(120deg);
+}
+
+      25% {
+            top: -0.4rem;
+            right: -2.6rem;
+            transform: rotate(80deg);
+            -webkit-transform: rotate(80deg);
+            -moz-transform: rotate(80deg);
+            -ms-transform: rotate(80deg);
+            -o-transform: rotate(80deg);
+}
+
+      50% {
+            top: -0.6rem;
+            right: -1.6rem;
+            transform: rotate(60deg);
+            -webkit-transform: rotate(60deg);
+            -moz-transform: rotate(60deg);
+            -ms-transform: rotate(60deg);
+            -o-transform: rotate(60deg);
+}
+
+      75% {
+            top: -0.4rem;
+            right: -0.6rem;
+            transform: rotate(30deg);
+            -webkit-transform: rotate(30deg);
+            -moz-transform: rotate(30deg);
+            -ms-transform: rotate(30deg);
+            -o-transform: rotate(30deg);
+}
+
+      to {
+            top: -0.2rem;
+            right: -0.4rem;
+            transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+}
+}
